@@ -7,8 +7,8 @@ sudo touch $link
 echo ""
 echo "Ajout des paramètre de grub dans le fichier custom."
 sudo sh -c "echo '# Custom config' >> $link
-sudo sh -c "echo 'GRUB_TIMEOUT="5"' >> $link
-sudo sh -c "echo 'GRUB_TIMEOUT_STYLE="menu"' >> $link
+sudo sh -c "echo 'GRUB_TIMEOUT=\"5\"' >> $link
+sudo sh -c "echo 'GRUB_TIMEOUT_STYLE=\"menu\"' >> $link
 
 echo ""
 echo "Mise a jour de GRUB."
