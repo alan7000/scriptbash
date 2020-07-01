@@ -1,5 +1,7 @@
 #!/bin/bash
 
+if [ ! -f "/etc/default/grub.d/90_custom.cfg" ]; then
+
 link=/etc/default/grub.d/90_custom.cfg
 echo "Création du fichier custom."
 sudo touch $link
@@ -17,3 +19,8 @@ sudo update-grub
 echo ""
 echo "Grub est a présent visible."
 read -a a
+
+else
+    echo "Erreur la configuration est déjà présente !"
+    exit 1
+fi

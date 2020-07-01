@@ -1,5 +1,7 @@
 #!/bin/bash
 
+if [ ! -d "/boot/grub/layouts" ]; then
+
 echo "Création du dossier layout dans le dossier /boot/grub"
 sudo mkdir /boot/grub/layouts
 
@@ -26,3 +28,8 @@ sudo update-grub
 echo ""
 echo "Activation du clavier en français terminer"
 read -a a
+
+else
+    echo "Erreur la configuration est deja présente !"
+    exit 1
+fi
